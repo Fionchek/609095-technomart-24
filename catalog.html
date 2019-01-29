@@ -43,16 +43,28 @@
 </header>
 
   <main class="container">
-    <div class="navigation-mini">
-    <span>
-      <a href="index.html">Главная</a>
-      &gt;
-      <a href="tools.html">Инструмент</a>
-      &gt;
-      <a>Перфораторы</a>
-      </span>
-      </div>
+    <ul class="breadcrumbs">
+    <li><a href="index.html">Главная &gt;</a></li>
+      <li><a href="catalog.html">Каталог &gt;</a></li>
+        <li><a href="tools.html">Инструмент &gt;</a></li>
+          <li class="breadcrumbs-current">Перфораторы</li>
+    </ul>
     <h2>Перфораторы:</h2>
+    <section class="filters">
+       <h3>фильтр</h3>
+       <span>цена:</span>
+       <!-- Здесь будет форма -->
+        </section>
+        <section class="sorting">
+           <h3>сортировка</h3>
+           <ul class="list-sorting">
+           <li><a href="#" class="active">по цене</a></li>
+           <li><a href="#">по типу</a></li>
+           <li><a href="#">по функционалу</a></li>
+         </ul>
+         <span>&#9650;</span>
+         <span>&#9660;</span>
+            </section>
     <section class="fabricators">
       <h3><b>Производители:</b></h3>
       <ul>
@@ -150,6 +162,20 @@
                       <p class="price-new">12500 Р.</p>
                   </article>
 </div>
+<section class="pagination">
+<ul class="pagination-list">
+    <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+    <li class="pagination-item"><a>2</a></li>
+    <li class="pagination-item"><a href="#">3</a></li>
+    <li class="pagination-item"><a href="#">следующая</a></li>
+  </ul>
+</section>
+<section class="in-few">
+  <h2>Пара слов о перфораторах</h2>
+  <p>Перфоратор - универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
+    Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+  </p>
+</section>
     </main>
   <footer class="main-footer">
     <section class="footer-menu-navigation">
