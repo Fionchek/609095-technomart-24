@@ -8,18 +8,22 @@
     <header class="main-header">
       <nav class="main-navigation">
         <section class="main-user-navigation">
-          <a>Техномарт</a>
-           <p>Поиск</p>
+          <span>Техномарт</span>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <label>Поиск:
+          <input type="text" name="search">
+          </label>
+          </form>
            <a href="bookmarks.html">Закладки</a>
            <a href="basket.html">Корзина</a>
-           <a href="buy.html">Оформить заказ></a>
+           <a href="buy.html">Оформить заказ</a>
            </section>
         <div class="container">
           <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
         <p>+7(812) 555-05-55</p>
         <p>г. Санкт-Петербург, ул. Б.Конюшенная, д.19/8</p>
-         <p>Войти</p>
-         <p>Регистрация</p>
+        <a class="login-link" href="login.html">Войти</a>
+        <a class="check-in-link" href="check-in.html">Регистрация</a>
          </div>
           <div class="main-navigation-wrapper">
          <div class="container">
@@ -38,12 +42,11 @@
     </header>
 
     <main class="container">
-
             <section class="features">
               <h2 class="visually-hidden">Преимущества</h2>
               <div class="materials">
                 <h2>Материалы</h2>
-                <a href="new-item.html">new</a>
+                <a href="new-item.html" aria-label="Новинки">new</a>
                 <a href="#">на любой вкус</a>
               </div>
               <div>
@@ -62,17 +65,19 @@
                 <h2>Доставка</h2>
                 <a href="#">бесплатно</a>
               </div>
-              <div class="drills">
-                <div class="slides-text">
+              <div class="slides">
                 <h2>Дрели</h2>
-              </div>
-              <a href="catalog.html">Открыть каталог</a>
-              <a href="picture2.jpg"><span>&gt;</span></a>
-              <a href="picture1.jpg"><span>&lt;</span></a>
-              <figure class="slides">
+              <a href="picture1.jpg">
+              <span class="visually-hidden">Первый слайд - дрель</span>
+              </a>
+              <a href="picture2.jpg">
+              <span class="visually-hidden">Второй слайд - перфоратор</span>
+              </a>
+              <figure>
             <img src="img/man-1.jpg" width="620" height="266" alt="Мужчина с дрелью">
             <img src="img/man-2.jpg" width="620" height="266" alt="Мужчина с перфоратором">
             </figure>
+            <a href="catalog.html">Открыть каталог</a>
               </div>
               </section>
               <section class="popular-item">
@@ -174,23 +179,22 @@
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-          <!-- кнопка: -->
-          <p>Подробнее о компании</p>
+          <a href="#">
+            Подробнее о компании
+          </a>
       </section>
       <section class="contacts-map">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
-          <img src="img/5.jpg" width="300" height="158" alt="Карта проезда">
-          <!-- кнопка: -->
-          <p>Заблудились? Напишите нам!</p>
+          <img src="img/map-small.jpg" width="300" height="158" alt="Карта проезда">
+          <a href="feedback.html">Заблудились? Напишите нам!</a>
       </section>
-
-    </main>
+</main>
 <footer class="main-footer">
   <section class="footer-menu-navigation">
   <div class="footer-site-menu">
-    <a>Техномарт</a>
+    <span>Техномарт</span>
     <div class="main-navigation-wrapper">
    <div class="container">
      <ul class="site-navigation">
@@ -222,9 +226,9 @@
 </p>
 <div class="footer-social">
   <ul>
-    <li><a class="social-button" href="#">Вконтакте</a></li>
-    <li><a class="social-button" href="#">Фейсбук</a></li>
-    <li><a class="social-button" href="#">Инстаграм</a></li>
+    <li><a class="social-button" href="#">Техномарт во Вконтакте</a></li>
+    <li><a class="social-button" href="#">Техномарт в Фейсбук</a></li>
+    <li><a class="social-button" href="#">Техномарт в Инстаграм</a></li>
   </ul>
 </div>
 <p class="footer-contacts">
@@ -237,5 +241,43 @@
 </p>
 </section>
 </footer>
+<!-- Попап для карты -->
+<section class="modal modal-map">
+  <h2 class="visually-hidden">Как до нас добраться</h2>
+  <p>
+      <img src="img/modal-map.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+    </p>
+    <!-- Иконка для закрытия окна -->
+    <button class="modal-close" type="button" aria-label="Закрыть окно"><span class="modal-close">x</span>
+      </button>
+</section>
+<!-- Модальное окно "как добраться" -->
+<section class="modal-feedback">
+<h2 class="visually-hidden">Форма обратной связи</h2>
+<form action="https://echo.htmlacademy.ru" method="post">
+  <fieldset>
+    <legend class="visually-hidden">Как добраться</legend>
+  <p>
+  <label>Ваше имя:<br>
+  <input type="text" name="name" placeholder="Имя Фамилия">
+  </label>
+  </p>
+  <p>
+  <label>Ваш e-mail:<br>
+  <input type="text" name="e-mail" placeholder="example.com">
+  </label>
+</p>
+  <p>
+  <label>Текст письма:<br>
+  <textarea name="about" rows="3" placeholder="В свободной форме"></textarea>
+</label>
+</p>
+  <button class="button" type="submit">Отправить</button>
+</fieldset>
+</form>
+<!-- Иконка для закрытия окна -->
+<button class="modal-close" type="button" aria-label="Закрыть окно"><span class="modal-close">x</span>
+  </button>
+</section>
   </body>
 </html>
