@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <!-- Cuprum -->
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -16,7 +20,7 @@
           </form>
            <a href="bookmarks.html">Закладки: 0</a>
            <a href="trash.html">Корзина: 10</a>
-           <a href="buy.html">Оформить заказ</a>
+           <a href="checkout.html">Оформить заказ</a>
            </section>
   <div class="container">
   <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
@@ -56,10 +60,22 @@
     <h2>Перфораторы:</h2>
     <section class="filters">
        <h3>фильтр</h3>
-       <span>цена:</span>
-       <!-- Здесь будет форма -->
-        </section>
-        <section class="sorting">
+       <!-- <span>цена:</span> -->
+       <form action="https://echo.htmlacademy.ru" method="post" oninput="priceoutput.value=pricecount.value">
+
+         <div class="half-width">
+          <label for="pricecount">цена</label>
+          1 <input type="range" id="pricecount" name="pricecount" min="1" max="30000" step="100"> 30000
+        </div>
+
+
+        <div class="half-width output-area">
+         <!-- Область для вывода значения -->
+         <output name="priceoutput"></output>
+       </div>
+</form>
+      </section>
+  <section class="sorting">
            <h3>сортировка</h3>
            <ul class="list-sorting">
            <li><a href="#" class="active">по цене</a></li>
@@ -131,7 +147,7 @@
               <p class="price-new">25500 Р.</p>
           </article>
         <article class="catalog-items">
-          <a href="buy.html">Купить</a>
+          <a href="checkout.html">Купить</a>
           <a href="to-bookmark.html">В закладки</a>
           <a href="new-item.html">new</a>
             <p class="item-name">
@@ -257,7 +273,7 @@
     <section class="modal-trash">
     <h2 class="visually-hidden">Товар добавлен в корзину</h2>
     <p>Товар добавлен в корзину</p>
-    <a href="buy.html">Оформить заказ</a>
+    <a href="checkout.html">Оформить заказ</a>
     <!-- Иконка для закрытия окна -->
     <button class="modal-close" type="button" aria-label="Закрыть окно"><span class="modal-close">x</span>
       </button>

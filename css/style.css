@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #000000;
+
+  background-color: #ffffff;
+  background-color: gray;
+}
+/* убрать подчеркивание у ссылок */
+a {
+  text-decoration: none;
+}
+
+/* убрать маркеры списка */
+.site-navigation,
+.list-service,
+.footer-navigation,
+.footer-social-links {
+  list-style: none;
+}
+
+/* белый цвет ссылок */
+.main-user-navigation a,
+.site-navigation a,
+.new-item.html a,
+.list-service a,
+.style-links,
+.social-button,
+.login-link {
+  color: #ffffff;
+}
+/* желтый цвет ссылок */
+.footer-navigation a {
+  color: #ffda96;
+}
+
+/* непосещенная ссылка "Оформить заказ"*/
+.checkout-link a:link  {
+  background-color: #63a63e;
+}
+/* наведение и фокус "Оформить заказ"*/
+.checkout-link a:hover {
+  background-color: #5fbb2d;
+}
+
+/* клик "Оформить заказ"*/
+.checkout-link a:active {
+  background-color: #518534;
+}
+
+/* наведение и фокус "Закладки" "Корзина*/
+.checkout-link a:hover {
+  background-color: #212a3a;
+}
+
+/* клик "Закладки" "Корзина"*/
+.checkout-link a:active {
+  background-color: #161d29;
+}
+
+/* темно-синяя заливка меню */
+.main-user-navigation {
+  background-color: #293449;
+}
+
+/* меню
+светло-серая заливка */
+.main-navigation {
+  background-color: #f4f7f9;
+}
+
+/* пользовательское меню */
+.main-user-navigation {
+  font-family: "Cuprum", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+}
