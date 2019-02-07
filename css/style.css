@@ -6,9 +6,7 @@ body {
   line-height: 24px;
   font-weight: normal;
   color: #000000;
-
   background-color: #ffffff;
-  background-color: gray;
 }
 /* убрать подчеркивание у ссылок */
 a {
@@ -16,55 +14,106 @@ a {
 }
 
 /* убрать маркеры списка */
-.site-navigation,
+.site-navigation-top,
+.site-navigation-bottom,
 .list-service,
-.footer-navigation,
+.footer-navigation-list,
 .footer-social-links {
   list-style: none;
 }
 
-/* белый цвет ссылок */
+/* белый цвет текста ссылок */
 .main-user-navigation a,
-.site-navigation a,
+.site-navigation-top a,
 .new-item.html a,
 .list-service a,
 .style-links,
-.social-button,
-.login-link {
+.social-button {
   color: #ffffff;
 }
 /* желтый цвет ссылок */
-.footer-navigation a {
+.footer-navigation-list a {
   color: #ffda96;
 }
 
-/* непосещенная ссылка "Оформить заказ"*/
+/* серый цыет ссылок в нижнем меню */
+.site-navigation-bottom a {
+  color: #f3f7f9;
+}
+
+/* "Оформить заказ" непосещенная ссылка */
 .checkout-link a:link  {
   background-color: #63a63e;
 }
-/* наведение и фокус "Оформить заказ"*/
+
+/* "Оформить заказ" наведение и фокус */
 .checkout-link a:hover {
   background-color: #5fbb2d;
 }
 
-/* клик "Оформить заказ"*/
+/* "Оформить заказ" клик*/
 .checkout-link a:active {
   background-color: #518534;
 }
 
-/* наведение и фокус "Закладки" "Корзина*/
-.checkout-link a:hover {
+/* "Закладки" "Корзина" наведение и фокус */
+.user-link a:hover {
   background-color: #212a3a;
 }
 
-/* клик "Закладки" "Корзина"*/
-.checkout-link a:active {
+/* "Закладки" "Корзина" клик*/
+.user-link a:active {
   background-color: #161d29;
 }
 
-/* темно-синяя заливка меню */
-.main-user-navigation {
+/* навигация по сайту, в состоянии покоя */
+.site-navigation-top:link li {
+  background-color: #32425c;
+}
+
+/* навигация по сайту, наведение и фокус */
+.site-navigation-top:hover li{
+  background-color: #32425c;
+}
+
+/* список, навигация по сайту, клик*/
+.site-navigation-top:active li{
+  background-color: #1d2739;
+}
+
+/* поле поиска, непосещенная */
+input[type=search] {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #ffffff;
+  opacity: 1;
   background-color: #293449;
+  border: none;
+}
+
+/* поле поиска, наведение и фокус */
+input[type=search]:hover {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #ffffff;
+  opacity: 1;
+  background-color: #212a3a;
+  border: none;
+}
+
+/* поле поиска, курсор в поле поиска */
+input[type=search]:focus {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #000000;
+  background-color: #ffffff;
+  border: none;
 }
 
 /* меню
@@ -73,9 +122,198 @@ a {
   background-color: #f4f7f9;
 }
 
-/* пользовательское меню */
+/* темно-синяя заливка меню - top */
 .main-user-navigation {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
+  background-color: #293449;
+  color: #ffffff;
+}
+
+/* меню, темно-синяя заливка и меню вверху */
+.main-navigation-wrapper-top ul{
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 17px;
+  background-color: #32425c;
+  box-shadow: 0 -5px 0 #293449 inset;
+}
+
+/* меню, темно-синяя заливка и меню вверху */
+.main-navigation-wrapper-top li:hover{
+  background-color: #293449;
+}
+
+/* меню, темно-синяя заливка и меню вверху */
+.main-navigation-wrapper-top li:active{
+  background-color: #1d2739;
+}
+
+h1 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: normal;
+  font-style: italic;
+  color: #ee3643;
+}
+
+
+h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.service-delivery-h2{
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.tel {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
+}
+
+.address-header {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-style: normal;
+  color: #32425c;
+}
+
+/* "Войти Регистрация" непосещенная ссылка */
+.login-link:link  {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #ffffff;
+}
+/* "Войти Регистрация" наведение и фокус */
+.login-link:hover {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
+  background-color: #ffffff;
+}
+
+/* "Войти Регистрация" клик */
+.login-link:active {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+}
+
+/* временно, фон бонусной части */
+.features,
+.popular-item,
+.popular-mechanism {
+  background-color: gray;
+}
+/* список: Деловые линии,... */
+.delivery-list {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: normal;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* меню сервиса: Доставка, Гарантии, Кредит */
+ .list-service li{
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: bold;
+  background-color: #32425c;
+  color: #ffffff;
+}
+
+/* меню сервиса: Доставка, Гарантии, Кредит */
+.list-service li:hover{
+  background-color: #293449;
+}
+
+/* меню сервиса: Доставка, Гарантии, Кредит */
+.list-service li:active{
+  background-color: #ffffff;
+  color: #32425c;
+}
+
+.red {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.footer-menu-navigation {
+background-color: #32425c;
+}
+
+.address-footer {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
+  color: #f3f7f9;
+}
+
+/* меню, темно-синяя заливка и меню Компания Новости Каталог Доставка внизу */
+.main-navigation-wrapper-bottom ul,
+.footer-navigation ul {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #f1f5f7;
+}
+
+/* меню, темно-синяя заливка и меню Компания Новости Каталог Доставка внизу */
+.main-navigation-wrapper-bottom li:hover,
+.footer-navigation li:hover {
+  text-decoration: underline;
+}
+
+/* меню, темно-синяя заливка и меню Компания Новости Каталог Доставка внизу */.main-navigation-wrapper-bottom li:active,
+.footer-navigation li:active {
+  color: rgba(241, 245, 247, 0.5);
+}
+
+.footer-site-contacts {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #ffffff;
+  background-color: #293449;
+}
+
+.contacts {
+  color: #ffd180;
+}
+
+.contacts:active {
+  color: #ee3643;
+}
+
+.modal {
+  display: none;
 }

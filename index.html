@@ -13,9 +13,9 @@
       <nav class="main-navigation">
         <section class="main-user-navigation">
           <span class="logo">Техномарт</span>
-          <form action="https://echo.htmlacademy.ru" method="get">
-            <label>Поиск:
-          <input type="text" name="search">
+          <form action="https://echo.htmlacademy.ru" method="get" >
+            <label class="search" for="search">
+          <input type="search" name="search" id="search" placeholder="Поиск">
           </label>
           </form>
           <span class="user-link">
@@ -28,14 +28,13 @@
            </section>
         <div class="container">
           <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-        <p>+7(812) 555-05-55</p>
-        <p>г. Санкт-Петербург, ул. Б.Конюшенная, д.19/8</p>
+        <span class="tel">+7(812) 555-05-55</span><br>
+        <span class="address-header">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</span>
         <a class="login-link" href="login.html">Войти</a>
         <a class="login-link" href="check-in.html">Регистрация</a>
          </div>
-          <div class="main-navigation-wrapper">
-         <div class="container">
-           <ul class="site-navigation">
+          <div class="main-navigation-wrapper-top">
+           <ul class="site-navigation-top">
           <li><a href="main.html">Главная</a></li>
           <li><a href="company.html">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
@@ -44,7 +43,6 @@
           <li><a href="delivery.html">Доставка</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
-      </div>
     </div>
   </nav>
     </header>
@@ -158,17 +156,17 @@
 </section>
 <section class="service">
   <h2>Сервисы</h2>
-  <p>Хороший интернет-магазин отличается от плохого не только ценами!
-  </p>
-  <p>Хороший интернет-магазин отличается от плохого не только ценами!
-  </p>
+  <span>Хороший интернет-магазин отличается от плохого не только ценами!
+  </span><br>
+  <span>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+  </span>
   <!-- Декоративная тень -->
   <ul class="list-service">
     <li>Доставка</li>
     <li>Гарантия</li>
     <li>Кредит</li>
   </ul>
-  <h2>Доставка</h2>
+  <h2 class="service-delivery-h2">Доставка</h2>
   <p>Мы с удовольствием доставим ваш товар прямо<br>
      к вашему подъезду совершенно бесплатно!<br>
     Ведь мы неплохо заработаем, <br>
@@ -182,12 +180,12 @@
         <p>Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах. </p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
           Техномарт работает со многими транспортными компаниями:</p>
-          <ul>
+          <ul class="delivery-list">
             <li>Деловые линии</li>
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-          <a href="#" class="style-links">
+          <a href="#" class="style-links red ">
             Подробнее о компании
           </a>
       </section>
@@ -196,16 +194,15 @@
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
           <img src="img/map-small.jpg" width="300" height="158" alt="Карта проезда">
-          <a href="feedback.html" class="style-links">Заблудились? Напишите нам!</a>
+          <a href="feedback.html" class="style-links red">Заблудились? Напишите нам!</a>
       </section>
 </main>
 <footer class="main-footer">
   <section class="footer-menu-navigation">
   <div class="footer-site-menu">
     <span>Техномарт</span>
-    <div class="main-navigation-wrapper">
-   <div class="container">
-     <ul class="site-navigation">
+    <div class="main-navigation-wrapper-bottom">
+     <ul class="site-navigation-bottom">
     <li><a href="company.html">Компания</a></li>
     <li><a href="news.html">Новости</a></li>
     <li><a href="catalog.html">Каталог</a></li>
@@ -214,12 +211,12 @@
   </ul>
 </div>
 </div>
-</div>
-<div class="footer-site-navigation">
+<div class="address-footer">
   <p>г. Санкт-Петербург, ул. Б.Конюшенная, д.19/8<br>
     +7(812) 555-05-55
   </p>
-<ul class="footer-navigation">
+  <div class="footer-navigation">
+<ul class="footer-navigation-list">
  <li><a href="materials.html">Материалы</a></li>
  <li><a href="mechanism.html">Техника</a></li>
  <li><a href="tool.html">Инструмент</a></li>
@@ -239,13 +236,11 @@
     <li><a class="social-button" href="#">Техномарт в Инстаграм</a></li>
   </ul>
 </div>
-<p class="footer-contacts">
-  Обратная связь:<br>
-  mail@htmlacademy.ru
-</p>
+<span>Обратная связь:</span>
+<span class="contacts">mail@htmlacademy.ru</span>
 <p class="footer-contacts">
   Разработано -<br>
-  <a href="https://htmlacademy.ru/intensive/htmlcss" class="style-links">htmlacademy.ru</a>
+  <a href="https://htmlacademy.ru/intensive/htmlcss" class="style-links contacts">htmlacademy.ru</a>
 </p>
 </section>
 </footer>
@@ -260,7 +255,7 @@
       </button>
 </section>
 <!-- Модальное окно "как добраться" -->
-<section class="modal-feedback">
+<section class="modal modal-feedback">
 <h2 class="visually-hidden">Форма обратной связи</h2>
 <form action="https://echo.htmlacademy.ru" method="post">
   <fieldset>
