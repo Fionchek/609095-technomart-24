@@ -3,41 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
-    <!-- Cuprum -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation">
         <section class="main-user-navigation">
-          <a href="index.html">Техномарт</a>
-          <form action="https://echo.htmlacademy.ru" method="get">
-            <label>Поиск:
-          <input type="text" name="search">
+          <span><a href="index.html">Техномарт</a></span>
+          <form action="https://echo.htmlacademy.ru" method="get" >
+            <label class="search" for="search">
+          <input type="search" name="search" id="search" placeholder="Поиск">
           </label>
           </form>
-           <a href="bookmarks.html">Закладки: 0</a>
-           <a href="trash.html">Корзина: 10</a>
-           <a href="checkout.html">Оформить заказ</a>
+          <span class="user-link">
+           <a href="bookmarks.html">Закладки</a>
+           <a href="basket.html">Корзина</a>
+           </span>
+           <span class="checkout-link">
+             <a href="checkout.html">Оформить заказ</a>
+           </span>
            </section>
-  <div class="container">
+<div class="container">
   <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-  <p>+7(812) 555-05-55</p>
-  <p>г. Санкт-Петербург, ул. Б.Конюшенная, д.19/8</p>
-     <span class="main-nav username">Равшан Джамшутович</span>
-     </div>
-     <div class="main-nav-list">
-   <ul class="user-navigation">
-       <li><a class="login-link" href="order.html">Мои заказы</a></li>
-       <li><a class="login-link" href="privat.html">Личный кабинет</a></li>
+  <span class="tel">+7(812) 555-05-55</span><br>
+  <p>г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
+  </div>
+  <div class="main-nav-list">
+     <a class="login-link-visit" href="login.html">Равшан Джамшутович</a>
+     <ul class="header-user-navigation">
+       <li><a href="order.html">Мои заказы</a></li>
+       <li><a href="privat.html">Личный кабинет</a></li>
      </ul>
      </div>
-    <div class="main-navigation-wrapper">
-   <div class="container">
-     <ul class="site-navigation">
+    <div class="main-navigation-wrapper-top">
+     <ul class="site-navigation-top">
     <li><a href="index.html">Главная</a></li>
     <li><a href="company.html">Компания</a></li>
     <li><a href="catalog.html">Каталог</a></li>
@@ -47,18 +49,19 @@
     <li><a href="contacts.html">Контакты</a></li>
   </ul>
 </div>
-</div>
 </nav>
 </header>
 
   <main class="container">
     <ul class="breadcrumbs">
-    <li><a href="index.html">Главная &gt;</a></li>
-      <li><a href="catalog.html">Каталог &gt;</a></li>
-        <li><a href="tools.html">Инструмент &gt;</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="tools.html">Инструмент</a></li>
           <li class="breadcrumbs-current">Перфораторы</li>
     </ul>
+    <div class=background-gray>
     <h2>Перфораторы:</h2>
+  </div>
+    <div class="bonus">
     <section class="filters">
        <h3>фильтр</h3>
        <!-- <span>цена:</span> -->
@@ -130,6 +133,7 @@
                 </button>
               </form>
              </section>
+           </div>
       <div class="catalog">
         <article class="catalog-items">
         <p class="item-name">
@@ -148,8 +152,12 @@
               <p class="price-new">25500 Р.</p>
           </article>
         <article class="catalog-items">
-          <a href="checkout.html">Купить</a>
-          <a href="to-bookmark.html">В закладки</a>
+          <span class="buy-button">
+          <a href="buy.html">Купить</a>
+        </span>
+            <span class="bookmark-button">
+          <a href="bookmark.html">В закладки</a>
+        </span>
           <a href="new-item.html">new</a>
             <p class="item-name">
             Перфоратор Bosch<br>
@@ -205,6 +213,7 @@
                       <p class="price-new">12500 Р.</p>
                   </article>
 </div>
+<div class="bonus">
 <section class="pagination">
 <ul class="pagination-list">
     <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
@@ -213,20 +222,21 @@
     <li class="pagination-item"><a href="#">следующая</a></li>
   </ul>
 </section>
+
 <section class="in-few">
   <h2>Пара слов о перфораторах</h2>
   <p>Перфоратор - универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
     Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток и ударная дрель.
   </p>
 </section>
+</div>
     </main>
     <footer class="main-footer">
       <section class="footer-menu-navigation">
       <div class="footer-site-menu">
-        <span>Техномарт</span>
-        <div class="main-navigation-wrapper">
-       <div class="container">
-         <ul class="site-navigation">
+        <span>Техномарт Лого</span>
+        <div class="main-navigation-wrapper-bottom">
+         <ul class="site-navigation-bottom">
         <li><a href="company.html">Компания</a></li>
         <li><a href="news.html">Новости</a></li>
         <li><a href="catalog.html">Каталог</a></li>
@@ -235,12 +245,12 @@
       </ul>
     </div>
     </div>
-    </div>
-    <div class="footer-site-navigation">
+    <div class="address-footer">
       <p>г. Санкт-Петербург, ул. Б.Конюшенная, д.19/8<br>
         +7(812) 555-05-55
       </p>
-    <ul class="footer-navigation">
+      <div class="footer-navigation">
+    <ul class="footer-navigation-list">
      <li><a href="materials.html">Материалы</a></li>
      <li><a href="mechanism.html">Техника</a></li>
      <li><a href="tool.html">Инструмент</a></li>
@@ -254,24 +264,22 @@
       Все права защищены
     </p>
     <div class="footer-social">
-      <ul>
+      <ul class="footer-social-links">
         <li><a class="social-button" href="#">Техномарт во Вконтакте</a></li>
         <li><a class="social-button" href="#">Техномарт в Фейсбук</a></li>
         <li><a class="social-button" href="#">Техномарт в Инстаграм</a></li>
       </ul>
     </div>
-    <p class="footer-contacts">
-      Обратная связь:<br>
-      mail@htmlacademy.ru
-    </p>
+    <span>Обратная связь:</span>
+    <span class="contacts">mail@htmlacademy.ru</span>
     <p class="footer-contacts">
       Разработано -<br>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" class="style-links contacts">htmlacademy.ru</a>
     </p>
     </section>
     </footer>
     <!-- Модальное окно "Товар добавлен в корзину" -->
-    <section class="modal-trash">
+    <section class="modal modal-trash">
     <h2 class="visually-hidden">Товар добавлен в корзину</h2>
     <p>Товар добавлен в корзину</p>
     <a href="checkout.html">Оформить заказ</a>

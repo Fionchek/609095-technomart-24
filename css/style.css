@@ -18,8 +18,37 @@ a {
 .site-navigation-bottom,
 .list-service,
 .footer-navigation-list,
-.footer-social-links {
+.footer-social-links,
+.header-user-navigation,
+.breadcrumbs {
   list-style: none;
+}
+
+.header-user-navigation a:link{
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+  text-decoration:underline;
+  color: #32425c;
+}
+
+.header-user-navigation a:hover{
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+  text-decoration:underline;
+  color: #ee3643;
+}
+
+.header-user-navigation a:active{
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+  text-decoration:underline;
+  color: rgba(50, 66, 92, 0.3);
 }
 
 /* белый цвет текста ссылок */
@@ -88,8 +117,7 @@ input[type=search] {
   line-height: 18px;
   font-weight: normal;
   color: #ffffff;
-  opacity: 1;
-  background-color: #293449;
+  background-color: transparent;
   border: none;
 }
 
@@ -169,6 +197,10 @@ h2 {
   color: #000000;
 }
 
+.service {
+  background-color: #f4f7f9;
+}
+
 .service-delivery-h2{
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 36px;
@@ -219,6 +251,32 @@ h2 {
   background-color: #ffffff;
 }
 
+/* "Равшан Джамшутович" покой */
+.login-link-visit:link  {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #ffffff;
+}
+/* "Равшан Джамшутович" наведение и фокус */
+.login-link-visit:hover {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* "Равшан Джамшутович" клик */
+.login-link-visit:active {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+}
+
 /* временно, фон бонусной части */
 .features,
 .popular-item,
@@ -236,23 +294,35 @@ h2 {
 }
 
 /* меню сервиса: Доставка, Гарантии, Кредит */
- .list-service li{
+ .list-service {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
+  text-align: left;
   background-color: #32425c;
   color: #ffffff;
+}
+/* меню сервиса: Доставка, Гарантии, Кредит покой */
+.list-service li{
+  background-color: #32425c;
+  /* box-shadow: 0 2px 0 #293449;
+  box-shadow: 0 1px 0 #405069 inset; */
 }
 
 /* меню сервиса: Доставка, Гарантии, Кредит */
 .list-service li:hover{
   background-color: #293449;
+  /* box-shadow: 0 1px 0 #293449;
+  box-shadow: 0 1px 0 #405069 inset; */
 }
 
 /* меню сервиса: Доставка, Гарантии, Кредит */
+/* индикатор активности */
 .list-service li:active{
   background-color: #ffffff;
+  box-shadow: 0 1px 0 #ffffff;
+  box-shadow: 0 -1px 0 #ffffff inset;
   color: #32425c;
 }
 
@@ -314,6 +384,110 @@ background-color: #32425c;
   color: #ee3643;
 }
 
-.modal {
+.modal,
+.bonus {
   display: none;
+}
+
+visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* корзина полная для js*/
+.basket-full {
+  background-color: #ee3643;
+}
+
+.breadcrumbs a{
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.background-gray {
+  background-color: #f2f6f8;
+}
+
+.catalog-items {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+.catalog-items:hover {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.item-name {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+.price-old {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #999999;
+  text-align: center;
+  text-decoration: line-through;
+}
+
+.price-new {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  /* временно */
+  background-color: blue;
+}
+
+.buy-button a:link {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #ffffff;
+  background-color: #63a63e;
+  box-shadow: 0 -3px #367315 inset;
+}
+
+.buy-button a:hover {
+  background-color: #5fbb2d;
+  box-shadow: 0 -3px #367315 inset;
+}
+
+.buy-button a:active {
+background-color: #518534;
+}
+
+.bookmark-button a:link {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #32425c;
+  background-color: #ffffff;
+  border: 3px solid #63a63e;
+}
+
+.bookmark-button a:hover {
+  border: 3px solid #32425c;
+}
+
+.bookmark-button a:active {
+  color: rgba(50, 66, 92, 0.3);
+  border: 3px solid rgba(50, 66, 92, 0.3);
 }
