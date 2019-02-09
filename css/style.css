@@ -144,6 +144,11 @@ input[type=search]:focus {
   border: none;
 }
 
+input[type=search]::-
+webkit-input-placeholder {
+  color: #ffffff;
+}
+
 /* меню
 светло-серая заливка */
 .main-navigation {
