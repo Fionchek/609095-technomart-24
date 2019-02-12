@@ -23,7 +23,7 @@ a {
 .breadcrumbs {
   list-style: none;
 }
-
+/* Мои заказы и Личный кабинет на странице каталога */
 .header-user-navigation a:link{
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
@@ -32,7 +32,7 @@ a {
   text-decoration:underline;
   color: #32425c;
 }
-
+/* Мои заказы и Личный кабинет на странице каталога */
 .header-user-navigation a:hover{
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
@@ -41,7 +41,7 @@ a {
   text-decoration:underline;
   color: #ee3643;
 }
-
+/* Мои заказы и Личный кабинет на странице каталога */
 .header-user-navigation a:active{
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
@@ -153,6 +153,12 @@ webkit-input-placeholder {
 светло-серая заливка */
 .main-navigation {
   background-color: #f4f7f9;
+  min-height: 320px;
+  /* отступ до следующего блочного элемента: */
+  margin-bottom: 59px;
+  /* flex */
+  /* display: flex;
+  flex-direction: column; */
 }
 
 /* темно-синяя заливка меню - top */
@@ -394,13 +400,14 @@ background-color: #32425c;
   display: none;
 }
 
-visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+  clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
@@ -496,3 +503,88 @@ background-color: #518534;
   color: rgba(50, 66, 92, 0.3);
   border: 3px solid rgba(50, 66, 92, 0.3);
 }
+/* Логотип Техномарт на главной */
+.logo {
+  width: 220px;
+  height: 42px;
+  background-color: #ee3643;
+  box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.24);
+}
+
+/* Логотип Техномарт на внутренних страницах */
+.logo-link:hover {
+  background-color: #ca2c37;
+}
+/* Логотип Техномарт на внутренних страницах */
+.logo-link:active {
+  background-color: #ba2732;
+}
+
+/* Сетка */
+
+/* временно (вся шапка) */
+.main-navigation {
+  border: black dotted 3px;
+}
+/* временно (верх шапки)*/
+.main-user-navigation {
+  border: red dotted 3px;
+}
+/* временно (середина шапки)*/
+.wrapper {
+    border: green dotted 3px;
+  }
+  /* временно (низ шапки)*/
+  .main-navigation-wrapper-top {
+    border: orange dotted 3px;
+  }
+
+html,
+body {
+  min-width: 1200px;
+  min-height: 3151px;
+}
+/* сбросить отступы списка по умолчанию */
+.site-navigation-top ul {
+  margin: 0;
+  padding: 0;
+}
+
+.main-navigation {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  /* min-height: 320px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-navigation-wrapper-top {
+  width: 940px;
+  min-height: 60px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper {
+  width: 940px;
+  min-height: 158px;
+  display: flex;
+  margin: auto;
+}
+
+.main-user-navigation {
+  width: 100%;
+  min-height: 42px;
+  display: flex;
+}
+
+.main {
+  display: flex;
+}
+/*
+.contacts-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+} */
