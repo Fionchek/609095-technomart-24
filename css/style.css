@@ -71,43 +71,28 @@ a {
 }
 
 /* "Оформить заказ" непосещенная ссылка */
-.checkout-link a:link  {
+.checkout-link:link  {
   background-color: #63a63e;
 }
 
 /* "Оформить заказ" наведение и фокус */
-.checkout-link a:hover {
+.checkout-link:hover {
   background-color: #5fbb2d;
 }
 
 /* "Оформить заказ" клик*/
-.checkout-link a:active {
+.checkout-link:active {
   background-color: #518534;
 }
 
 /* "Закладки" "Корзина" наведение и фокус */
-.user-link a:hover {
+.user-link:hover {
   background-color: #212a3a;
 }
 
 /* "Закладки" "Корзина" клик*/
-.user-link a:active {
+.user-link:active {
   background-color: #161d29;
-}
-
-/* навигация по сайту, в состоянии покоя */
-.site-navigation-top:link li {
-  background-color: #32425c;
-}
-
-/* навигация по сайту, наведение и фокус */
-.site-navigation-top:hover li{
-  background-color: #32425c;
-}
-
-/* список, навигация по сайту, клик*/
-.site-navigation-top:active li{
-  background-color: #1d2739;
 }
 
 /* поле поиска, непосещенная */
@@ -154,11 +139,6 @@ webkit-input-placeholder {
 .main-navigation {
   background-color: #f4f7f9;
   min-height: 320px;
-  /* отступ до следующего блочного элемента: */
-  margin-bottom: 59px;
-  /* flex */
-  /* display: flex;
-  flex-direction: column; */
 }
 
 /* темно-синяя заливка меню - top */
@@ -171,7 +151,7 @@ webkit-input-placeholder {
 }
 
 /* меню, темно-синяя заливка и меню вверху */
-.main-navigation-wrapper-top ul{
+.site-navigation-top {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 17px;
@@ -179,13 +159,18 @@ webkit-input-placeholder {
   box-shadow: 0 -5px 0 #293449 inset;
 }
 
-/* меню, темно-синяя заливка и меню вверху */
-.main-navigation-wrapper-top li:hover{
+/* навигация по сайту, покой */
+.site-navigation-top li:link{
+  background-color: #32425c;
+}
+
+/* навигация по сайту, наведение и фокус */
+.site-navigation-top li:hover{
   background-color: #293449;
 }
 
-/* меню, темно-синяя заливка и меню вверху */
-.main-navigation-wrapper-top li:active{
+/* навигация по сайту, клик */
+.site-navigation-top li:active{
   background-color: #1d2739;
 }
 
@@ -206,6 +191,8 @@ h2 {
   font-weight: normal;
   text-transform: uppercase;
   color: #000000;
+  margin: 0;
+  vertical-align: middle;
 }
 
 .service {
@@ -226,6 +213,7 @@ h2 {
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
+  border: 3px solid #ffffff;
 }
 
 .address-header {
@@ -346,10 +334,6 @@ h2 {
   background-color: #ee3643;
 }
 
-.footer-menu-navigation {
-background-color: #32425c;
-}
-
 .address-footer {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
@@ -359,7 +343,7 @@ background-color: #32425c;
 }
 
 /* меню, темно-синяя заливка и меню Компания Новости Каталог Доставка внизу */
-.main-navigation-wrapper-bottom ul,
+.site-navigation-bottom,
 .footer-navigation ul {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
@@ -368,12 +352,12 @@ background-color: #32425c;
 }
 
 /* меню, темно-синяя заливка и меню Компания Новости Каталог Доставка внизу */
-.main-navigation-wrapper-bottom li:hover,
+.site-navigation-bottom li:hover,
 .footer-navigation li:hover {
   text-decoration: underline;
 }
 
-/* меню, темно-синяя заливка и меню Компания Новости Каталог Доставка внизу */.main-navigation-wrapper-bottom li:active,
+/* меню, темно-синяя заливка и меню Компания Новости Каталог Доставка внизу */.site-navigation-bottom li:active,
 .footer-navigation li:active {
   color: rgba(241, 245, 247, 0.5);
 }
@@ -416,17 +400,14 @@ background-color: #32425c;
   background-color: #ee3643;
 }
 
-.breadcrumbs a{
+.breadcrumbs {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: normal;
   color: #000000;
   background-color: #ffffff;
-}
-
-.background-gray {
-  background-color: #f2f6f8;
+  text-transform: uppercase;
 }
 
 .catalog-items {
@@ -503,88 +484,228 @@ background-color: #518534;
   color: rgba(50, 66, 92, 0.3);
   border: 3px solid rgba(50, 66, 92, 0.3);
 }
-/* Логотип Техномарт на главной */
-.logo {
+/* Логотип Техномарт на главной в шапке */
+.logo-top {
   width: 220px;
   height: 42px;
   background-color: #ee3643;
   box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
-/* Логотип Техномарт на внутренних страницах */
+/* Логотип Техномарт на внутренних страницах в шапке */
 .logo-link:hover {
   background-color: #ca2c37;
 }
-/* Логотип Техномарт на внутренних страницах */
+/* Логотип Техномарт на внутренних страницах в шапке */
+.logo-link:active {
+  background-color: #ba2732;
+}
+
+/* Логотип Техномарт на главной в подвале */
+.logo-bottom {
+  width: 220px;
+  height: 68px;
+  background-color: #ee3643;
+  box-shadow: 0 -5px 0 0 rgba(0, 0, 0, 0.24) inset;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+/* Логотип Техномарт на внутренних страницах в подвале */
+.logo-link:hover {
+  background-color: #ca2c37;
+}
+/* Логотип Техномарт на внутренних страницах в подвале */
 .logo-link:active {
   background-color: #ba2732;
 }
 
 /* Сетка */
-
-/* временно (вся шапка) */
-.main-navigation {
-  border: black dotted 3px;
-}
-/* временно (верх шапки)*/
-.main-user-navigation {
-  border: red dotted 3px;
-}
-/* временно (середина шапки)*/
-.wrapper {
-    border: green dotted 3px;
-  }
-  /* временно (низ шапки)*/
-  .main-navigation-wrapper-top {
-    border: orange dotted 3px;
-  }
-
 html,
 body {
   min-width: 1200px;
   min-height: 3151px;
+  margin: 0 auto;
 }
 /* сбросить отступы списка по умолчанию */
-.site-navigation-top ul {
+.site-navigation-top ul,
+.site-navigation-bottom ul,
+.header-user-navigation ul,
+.footer-social-links {
+  margin: 0;
+}
+
+/* сделать блочными элементами */
+a,
+img {
+  display: block;
+}
+/* вся шапка */
+.main-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* верх шапки */
+.main-user-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* середина шапки */
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  min-height: 158px;
+  align-items: center;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* низ шапки */
+.site-navigation-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 940px;
+  min-height: 60px;
+  margin: 0 auto 60px;
+  padding: 0;
+}
+/* Шапка - Логотип Техномарт */
+.logo-top {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 130px;
+}
+
+.checkout-link {
+  margin-right: 130px;
+}
+
+.menu-container {
+  width: 196px;
+  margin-left: 60px;
+}
+
+.conacts {
+  display: flex;
+  width: 270px;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
 
-.main-navigation {
-  display: flex;
-  flex-direction: column;
-  width: 1200px;
-  /* min-height: 320px; */
-  margin-left: auto;
-  margin-right: auto;
+.tel {
+  width: 270px;
 }
 
-.main-navigation-wrapper-top {
-  width: 940px;
-  min-height: 60px;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.wrapper {
-  width: 940px;
-  min-height: 158px;
-  display: flex;
-  margin: auto;
-}
-
-.main-user-navigation {
-  width: 100%;
-  min-height: 42px;
-  display: flex;
-}
-
-.main {
-  display: flex;
-}
-/*
 .contacts-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-} */
+  display:flex;
+  justify-content: space-between;
+  width: 940px;
+  margin: 0 auto;
+  padding: 82px 130px 86px;
+}
+
+.about-company {
+  width: 519px;
+  outline: 1px solid gray;
+}
+
+.contacts-map {
+  width: 300px;
+  outline: 1px solid gray;
+}
+/* весь подвал */
+.main-footer {
+  width: 1200px;
+  margin: 0 auto;
+  /* временно */
+}
+
+.footer-menu-navigation {
+ padding: 0 130px;
+background-color: #32425c;
+}
+
+/* подвал, список */
+.footer-site-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-site-menu ul {
+  display: flex;
+}
+
+.address-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.address-footer ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.address-footer p{
+  /* margin-bottom: 53px; */
+}
+
+.footer-site-contacts {
+  display: flex;
+  min-height: 107px;
+  padding-left: 130px;
+  padding-right: 130px;
+  justify-content: space-between;
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  width: 940px;
+padding: 23px 0;
+}
+
+.background-gray {
+  display: flex;
+  align-items: center;
+  background-color: #f2f6f8;
+  width: 940px;
+  margin: 0 auto 20px;
+  min-height: 89px;
+}
+
+.items-wrapper {
+  width: 940px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+
+.catalog {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 700px;
+}
+
+.mechanism-filters {
+  width: 220px;
+}
+
+.catalog article {
+  width: 220px;
+}
