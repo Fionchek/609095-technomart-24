@@ -65,33 +65,50 @@ a {
   color: #ffda96;
 }
 
-/* серый цыет ссылок в нижнем меню */
+/* серый цвет ссылок в нижнем меню */
 .site-navigation-bottom a {
   color: #f3f7f9;
 }
 
 /* "Оформить заказ" непосещенная ссылка */
-.checkout-link:link  {
+.checkout:link  {
   background-color: #63a63e;
+  padding-left: 20px;
+  padding-right: 22px;
 }
 
 /* "Оформить заказ" наведение и фокус */
-.checkout-link:hover {
+.checkout:hover {
   background-color: #5fbb2d;
 }
 
 /* "Оформить заказ" клик*/
-.checkout-link:active {
+.checkout:active {
   background-color: #518534;
 }
 
-/* "Закладки" "Корзина" наведение и фокус */
-.user-link:hover {
+/* "Закладки" "Корзина" покой */
+.basket:link {
+  background-color: #293449;
+  padding-left: 50px;
+  padding-right: 31px;
+}
+
+.bookmark:link {
+  background-color: #293449;
+  padding-left: 44px;
+  padding-right: 43px;
+}
+
+/* "Закладки", "Корзина" наведение и фокус */
+.basket:hover,
+.bookmark:hover  {
   background-color: #212a3a;
 }
 
 /* "Закладки" "Корзина" клик*/
-.user-link:active {
+.basket:active,
+.bookmark:active  {
   background-color: #161d29;
 }
 
@@ -104,6 +121,8 @@ input[type=search] {
   color: #ffffff;
   background-color: transparent;
   border: none;
+  padding-left: 49px;
+  width: 270px;
 }
 
 /* поле поиска, наведение и фокус */
@@ -138,7 +157,6 @@ webkit-input-placeholder {
 светло-серая заливка */
 .main-navigation {
   background-color: #f4f7f9;
-  min-height: 320px;
 }
 
 /* темно-синяя заливка меню - top */
@@ -146,6 +164,7 @@ webkit-input-placeholder {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
+  font-weight: normal;
   background-color: #293449;
   color: #ffffff;
 }
@@ -192,7 +211,6 @@ h2 {
   text-transform: uppercase;
   color: #000000;
   margin: 0;
-  vertical-align: middle;
 }
 
 .service {
@@ -384,18 +402,41 @@ h2 {
   display: none;
 }
 
-.visually-hidden {
+/* Добавим .visually-hidden */
+.visually-hidden:not(:focus):not(:active){
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
-/* корзина полная для js*/
+/* .visually-hidden для форм */
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .basket-full {
   background-color: #ee3643;
 }
@@ -486,10 +527,12 @@ background-color: #518534;
 }
 /* Логотип Техномарт на главной в шапке */
 .logo-top {
-  width: 220px;
-  height: 42px;
   background-color: #ee3643;
-  box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 -5px 0 0 rgba(0, 0, 0, 0.24) inset;
+  width: 220px;
+  margin-top: 0;
+  margin-bottom: -5px;
+  align-self: stretch;
 }
 
 /* Логотип Техномарт на внутренних страницах в шапке */
@@ -535,11 +578,11 @@ body {
   margin: 0;
 }
 
-/* сделать блочными элементами */
-a,
-img {
+/* сделать изображения блочными элементами? */
+/* img {
   display: block;
-}
+} */
+
 /* вся шапка */
 .main-navigation {
   display: flex;
@@ -552,10 +595,12 @@ img {
 /* верх шапки */
 .main-user-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   margin: 0 auto;
+  padding: 0 130px;
 }
 
 /* середина шапки */
@@ -583,12 +628,8 @@ img {
 /* Шапка - Логотип Техномарт */
 .logo-top {
   margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 130px;
-}
-
-.checkout-link {
-  margin-right: 130px;
+  align-self: stretch;
+  margin-bottom: -5px;
 }
 
 .menu-container {
@@ -665,8 +706,7 @@ background-color: #32425c;
 .footer-site-contacts {
   display: flex;
   min-height: 107px;
-  padding-left: 130px;
-  padding-right: 130px;
+  padding: 0 130px;
   justify-content: space-between;
 }
 
@@ -708,4 +748,21 @@ padding: 23px 0;
 
 .catalog article {
   width: 220px;
+}
+
+/* Микросетка: */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Шапка: делаем ссылки навигации блочными элементами. */
+/* Задаем ссылкам внутренние отступы и вертикальное выравнивание по центру. */
+.main-user-navigation a,
+input[type=search] {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: 0;
 }
