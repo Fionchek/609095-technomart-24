@@ -600,7 +600,7 @@ body {
 .main-user-navigation {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   margin: 0 auto;
