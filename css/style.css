@@ -75,6 +75,7 @@ a {
   background-color: #63a63e;
   padding-left: 20px;
   padding-right: 22px;
+  outline: 1px solid black;
 }
 
 /* "Оформить заказ" наведение и фокус */
@@ -92,12 +93,14 @@ a {
   background-color: #293449;
   padding-left: 50px;
   padding-right: 31px;
+  outline: 1px solid yellow;
 }
 
 .bookmark:link {
   background-color: #293449;
   padding-left: 44px;
   padding-right: 43px;
+  outline: 1px solid red;
 }
 
 /* "Закладки", "Корзина" наведение и фокус */
@@ -123,6 +126,7 @@ input[type=search] {
   border: none;
   padding-left: 49px;
   width: 270px;
+  outline: 1px solid red;
 }
 
 /* поле поиска, наведение и фокус */
