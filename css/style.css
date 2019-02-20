@@ -74,8 +74,8 @@ a {
 .checkout:link  {
   background-color: #63a63e;
   padding-left: 20px;
-  padding-right: 22px;
-  outline: 1px solid black;
+  width: 130px;
+  /* outline: 1px solid red; */
 }
 
 /* "Оформить заказ" наведение и фокус */
@@ -92,15 +92,72 @@ a {
 .basket:link {
   background-color: #293449;
   padding-left: 50px;
-  padding-right: 31px;
-  outline: 1px solid yellow;
+  width: 100px;
+  /* outline: 1px solid red; */
+}
+
+.bookmark{
+position: relative;
+}
+
+.bookmark::before {
+  content: "";
+  width: 14px;
+  height: 16px;
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  background-image: url("../svg/icon-bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.bookmark:hover::before,
+.bookmark:focus::before {
+  opacity: 1;
+}
+
+.bookmark:active::before {
+  opacity: 0.5;
+}
+
+.login-link:hover::before,
+.login-link:focus::before,
+.login-link:active::before {
+  opacity: 1;
 }
 
 .bookmark:link {
   background-color: #293449;
   padding-left: 44px;
-  padding-right: 43px;
-  outline: 1px solid red;
+  width: 106px;
+  /* outline: 1px solid red; */
+}
+.basket{
+position: relative;
+}
+
+.basket::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  background-image: url("../svg/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.basket:hover::before,
+.basket:focus::before {
+  opacity: 1;
+}
+
+.basket:active::before {
+  opacity: 0.5;
 }
 
 /* "Закладки", "Корзина" наведение и фокус */
@@ -124,9 +181,11 @@ input[type=search] {
   color: #ffffff;
   background-color: transparent;
   border: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
   padding-left: 49px;
   width: 270px;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 /* поле поиска, наведение и фокус */
@@ -156,6 +215,34 @@ input[type=search]::-
 webkit-input-placeholder {
   color: #ffffff;
 }
+/* Лупа */
+label{
+position: relative;
+display: block;
+}
+/* Лупа */
+label::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  background-image: url("../svg/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+/* Лупа */
+label:hover::before,
+input[type=search]::before {
+  opacity: 1;
+}
+/* Лупа */
+label:focus::before{
+  background-image: url("../svg/icon-search-red.svg");
+}
+
 
 /* меню
 светло-серая заливка */
@@ -537,6 +624,10 @@ background-color: #518534;
   margin-top: 0;
   margin-bottom: -5px;
   align-self: stretch;
+  background-image: url("../svg/logo-technomart.svg");
+  background-size: 110px 18px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Логотип Техномарт на внутренних страницах в шапке */
@@ -556,15 +647,10 @@ background-color: #518534;
   box-shadow: 0 -5px 0 0 rgba(0, 0, 0, 0.24) inset;
   margin-top: 0;
   margin-bottom: 32px;
-}
-
-/* Логотип Техномарт на внутренних страницах в подвале */
-.logo-link:hover {
-  background-color: #ca2c37;
-}
-/* Логотип Техномарт на внутренних страницах в подвале */
-.logo-link:active {
-  background-color: #ba2732;
+  background-image: url("../svg/logo-technomart.svg");
+  background-size: 138px 23px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Сетка */
@@ -603,7 +689,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 0 130px;
 }
 
@@ -628,12 +714,6 @@ body {
   min-height: 60px;
   margin: 0 auto 60px;
   padding: 0;
-}
-/* Шапка - Логотип Техномарт */
-.logo-top {
-  margin-top: 0;
-  align-self: stretch;
-  margin-bottom: -5px;
 }
 
 .menu-container {
@@ -763,10 +843,8 @@ img {
 
 /* Шапка: делаем ссылки навигации блочными элементами. */
 /* Задаем ссылкам внутренние отступы и вертикальное выравнивание по центру. */
-.main-user-navigation a,
-input[type=search] {
+.main-user-navigation a {
   display: block;
   padding-top: 12px;
   padding-bottom: 12px;
-  margin: 0;
 }
