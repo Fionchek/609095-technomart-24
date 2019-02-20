@@ -243,6 +243,11 @@ label:focus::before{
   background-image: url("../svg/icon-search-red.svg");
 }
 
+/* Лупа */
+input[type=search]:focus+label{
+  background-image: url("../svg/icon-search-red.svg");
+}
+
 
 /* меню
 светло-серая заливка */
@@ -283,16 +288,6 @@ label:focus::before{
 .site-navigation-top li:active{
   background-color: #1d2739;
 }
-
-h1 {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 13px;
-  line-height: 24px;
-  font-weight: normal;
-  font-style: italic;
-  color: #ee3643;
-}
-
 
 h2 {
   font-family: "Cuprum", Arial, sans-serif;
@@ -697,11 +692,20 @@ body {
 .wrapper {
   display: flex;
   justify-content: space-between;
-  min-height: 158px;
   align-items: center;
-  width: 940px;
-  margin: 0 auto;
-  padding: 0;
+  width: 888px;
+  margin-top: 46px;
+  margin-left: 183px;
+  margin-bottom: 44px;
+}
+/* середина шапки */
+h1 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: normal;
+  font-style: italic;
+  color: #ee3643;
 }
 
 /* низ шапки */
@@ -711,14 +715,13 @@ body {
   flex-wrap: wrap;
   align-items: center;
   width: 940px;
-  min-height: 60px;
-  margin: 0 auto 60px;
+  margin: 0;
   padding: 0;
 }
 
 .menu-container {
-  width: 196px;
-  margin-left: 60px;
+  width: 200px;
+  margin-left: 53px;
 }
 
 .conacts {
