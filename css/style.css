@@ -172,50 +172,6 @@ position: relative;
   background-color: #161d29;
 }
 
-/* поле поиска, непосещенная */
-input[type=search] {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 17px;
-  line-height: 18px;
-  font-weight: normal;
-  color: #ffffff;
-  background-color: transparent;
-  border: none;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 49px;
-  width: 270px;
-  /* outline: 1px solid red; */
-}
-
-/* поле поиска, наведение и фокус */
-input[type=search]:hover {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 17px;
-  line-height: 18px;
-  font-weight: normal;
-  color: #ffffff;
-  opacity: 1;
-  background-color: #212a3a;
-  border: none;
-}
-
-/* поле поиска, курсор в поле поиска */
-input[type=search]:focus {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 17px;
-  line-height: 18px;
-  font-weight: normal;
-  color: #000000;
-  background-color: #ffffff;
-  border: none;
-}
-
-input[type=search]::-
-webkit-input-placeholder {
-  color: #ffffff;
-}
-
 
 /* темно-синяя заливка меню - top */
 .main-user-navigation {
@@ -225,30 +181,6 @@ webkit-input-placeholder {
   font-weight: normal;
   background-color: #293449;
   color: #ffffff;
-}
-
-/* меню, темно-синяя заливка и меню вверху */
-.site-navigation-top {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 17px;
-  line-height: 17px;
-  background-color: #32425c;
-  box-shadow: 0 -5px 0 #293449 inset;
-}
-
-/* навигация по сайту, покой */
-.site-navigation-top li:link{
-  background-color: #32425c;
-}
-
-/* навигация по сайту, наведение и фокус */
-.site-navigation-top li:hover{
-  background-color: #293449;
-}
-
-/* навигация по сайту, клик */
-.site-navigation-top li:active{
-  background-color: #1d2739;
 }
 
 h2 {
@@ -274,14 +206,6 @@ h2 {
   color: #32425c;
 }
 
-.tel {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 21px;
-  line-height: 21px;
-  color: #ee3643;
-  border: 3px solid #ffffff;
-}
-
 .address-header {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
@@ -290,33 +214,7 @@ h2 {
   color: #32425c;
 }
 
-/* "Войти Регистрация" непосещенная ссылка */
-.login-link:link  {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 21px;
-  line-height: 21px;
-  color: #000000;
-  background-color: #ffffff;
-}
-/* "Войти Регистрация" наведение и фокус */
-.login-link:hover {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 21px;
-  line-height: 21px;
-  color: #ee3643;
-  background-color: #ffffff;
-}
-
-/* "Войти Регистрация" клик */
-.login-link:active {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 21px;
-  line-height: 21px;
-  color: rgba(0, 0, 0, 0.3);
-  background-color: #ffffff;
-}
-
-/* "Равшан Джамшутович" покой */
+/* "Равшан Джамшутович" */
 .login-link-visit:link  {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
@@ -435,10 +333,6 @@ h2 {
   font-weight: normal;
   color: #ffffff;
   background-color: #293449;
-}
-
-.contacts {
-  color: #ffd180;
 }
 
 .contacts:active {
@@ -652,17 +546,6 @@ body {
 }
 
 /* середина шапки */
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 888px;
-  margin-top: 46px;
-  margin-left: 183px;
-  margin-bottom: 44px;
-  outline: 1px solid white;
-}
-/* середина шапки */
 h1 {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
@@ -672,59 +555,6 @@ h1 {
   color: #ee3643;
 }
 
-/* низ шапки */
-.site-navigation-top {
-  display: flex;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  width: 940px;
-  padding-left: 52px;
-  padding-right: 55px;
-}
-
-.site-navigation-top li {
-  padding-top: 20px;
-  padding-bottom: 23px;
-  margin: auto;
-  flex-grow: 1;
-  outline: 1px solid orange;
-}
-
-.menu-container {
-  width: 200px;
-  margin-left: 53px;
-}
-
-.conacts {
-  display: flex;
-  width: 270px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-
-.tel {
-  width: 270px;
-}
-
-.contacts-wrapper {
-  display:flex;
-  justify-content: space-between;
-  width: 940px;
-  margin: 0 auto;
-  padding: 82px 130px 86px;
-}
-
-.about-company {
-  width: 519px;
-  outline: 1px solid gray;
-}
-
-.contacts-map {
-  width: 300px;
-  outline: 1px solid gray;
-}
 /* весь подвал */
 .main-footer {
   width: 1200px;
@@ -822,3 +652,231 @@ img {
   padding-top: 12px;
   padding-bottom: 12px;
 }
+
+/* Лупа */
+/* label{
+position: relative;
+display: block;
+} */
+/* Лупа */
+/* label::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  background-image: url("../svg/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+} */
+
+/* label:active::before {
+  background-image: url("../svg/icon-search-red.svg");
+} */
+
+/* Лупа */
+/* label:hover::before {
+  background-image: url("../svg/icon-search.svg");
+  opacity: 1;
+} */
+
+/* поле поиска, непосещенная */
+input[type=search] {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 49px;
+  width: 270px;
+  background-image: url("../svg/icon-search-link.svg");
+  background-repeat: no-repeat;
+  background-position: 17px 12px;
+}
+
+/* поле поиска, наведение */
+input[type=search]:hover {
+  background-color: #212a3a;
+  background-image: url("../svg/icon-search.svg");
+}
+/* поле поиска, клик */
+input[type=search]:active {
+  background-color: #293449;
+  background-image: url("../svg/icon-search-active.svg");
+}
+
+/* курсор в поле поиска */
+input[type=search]:focus {
+  color: #000000;
+  background-color: #ffffff;
+  background-image: url("../svg/icon-search-red.svg");
+}
+
+
+/* текст placeholder */
+input::-moz-placeholder {
+   color: #ffffff;
+ }
+ /* текст placeholder */
+input::-webkit-input-placeholder {
+   color: #ffffff;
+ }
+
+ .site-navigation-top {
+   font-family: "Cuprum", Arial, sans-serif;
+   font-size: 17px;
+   line-height: 17px;
+   background-color: #32425c;
+   box-shadow: 0 5px 0 #293449;
+   display: flex;
+   flex-wrap: wrap;
+   width: 940px;
+   /* margin-bottom: 60px; */
+   margin-top: 0px;
+   margin-bottom: 65px;
+   padding: 0;
+ }
+
+  .site-navigation-top a {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 18px;
+    padding-left: 32px;
+    padding-right: 29px;
+    margin: 0;
+  }
+  .site-navigation-top li:first-child {
+    padding-left: 20px;
+  }
+
+ .site-navigation-top a:link{
+   background-color: #32425c;
+ }
+ .site-navigation-top a:hover{
+   background-color: #293449;
+ }
+ .site-navigation-top a:active{
+   background-color: #1d2739;
+ }
+
+ .wrapper {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   padding-left: 183px;
+   padding-right: 130px;
+   margin-bottom: 40px;
+   margin-top: 43px;
+ }
+
+ .menu-container {
+   width: 200px;
+   margin: 0;
+   padding-right: 71px;
+   align-self: flex-end;
+ }
+
+ /* .login-link и .enter не переставлять местами
+ св-во padding! */
+ .login-link {
+   font-family: "Cuprum", Arial, sans-serif;
+   font-size: 21px;
+   line-height: 21px;
+   color: #000000;
+   background-color: #ffffff;
+   padding: 12px 25px 11px 25px;
+   position: relative;
+   display: block;
+   margin-bottom: 24px;
+ }
+/* .login-link и .enter не переставлять местами
+св-во padding! */
+ .enter{
+   padding-left: 48px;
+   margin-right: 10px;
+ }
+
+ .enter::before {
+   content: "";
+   width: 20px;
+   height: 17px;
+   position: absolute;
+   top: 14px;
+   left: 14px;
+   background-image: url("../svg/icon-login.svg");
+   background-repeat: no-repeat;
+   background-position: 0 0;
+   opacity: 0.3;
+ }
+
+ .enter:hover::before,
+ .enter:focus::before {
+   background-image: url("../svg/icon-login-hover.svg");
+ }
+
+ .login-link:link  {
+   color: #000000;
+ }
+ .login-link:hover {
+   color: #ee3643;
+ }
+ .login-link:active {
+   color: rgba(0, 0, 0, 0.3);
+ }
+
+  .contacts {
+    display: flex;
+    width: 270px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 69px;
+    position: relative;
+    align-self: flex-end;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .tel {
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 21px;
+    line-height: 21px;
+    color: #ee3643;
+    border: 3px solid #ffffff;
+    padding: 13px 50px 11px 70px;
+  }
+
+  .tel::before {
+    content: "";
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    background-image: url("../svg/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+/* 1 */
+  .contacts-wrapper {
+    display:flex;
+    justify-content: space-between;
+    width: 940px;
+    margin: 0 auto;
+    padding: 82px 130px 86px;
+  }
+/* 2 */
+  .about-company {
+    width: 519px;
+    outline: 1px solid gray;
+  }
+/* 3 */
+  .contacts-map {
+    width: 300px;
+    outline: 1px solid gray;
+  }
