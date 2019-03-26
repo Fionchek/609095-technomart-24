@@ -11,7 +11,9 @@
       <header class="main-header">
          <nav class="main-navigation">
             <section class="main-user-navigation">
-               <a class="logo-top logo-link" href="index.html" aria-label="На главную страницу магазина Техномарт"></a>
+              <a class="logo-top" href="index.html">
+              <img src="svg/logo-technomart.svg" width="110" height="18" alt="Логотип магазина Техномарт">
+            </a>
                <form action="https://echo.htmlacademy.ru" method="get" >
                   <label class="search" for="search">
                   <input type="search" name="search" id="search" placeholder="Поиск:">
@@ -35,8 +37,7 @@
                   </a>
                   </span>
                   <ul class="header-user-navigation">
-                     <li><a href="order.html">Мои заказы</a></li>
-                     <li class="dot">.</li>
+                     <li><a class="dot" href="order.html">Мои заказы</a></li>
                      <li><a href="privat.html">Личный кабинет</a></li>
                   </ul>
                </div>
@@ -75,7 +76,7 @@
             <div class="filter-wrapper">
                <h3>Фильтр:</h3>
                <form class="filter-form" action="https://echo.htmlacademy.ru" method="get" oninput="priceoutput.value=pricecount.value">
-                  <fieldset class="filter-item">
+                  <fieldset class="filter-item filter-item-1">
                      <legend class="filter-legend">Цена:</legend>
                      <div class="range-filter">
                         <div class="range-controls">
@@ -89,13 +90,14 @@
                            <label class="min-price">
                            <input name="min-price" type="text" value="0">
                            </label>
-                           <label class="max-price">&mdash;
+                           <label class="max-price">
+                             <span>&mdash;</span>
                            <input name="max-price" type="text" value="30000">
                            </label>
                         </div>
                      </div>
                   </fieldset>
-                  <fieldset class="filter-item">
+                  <fieldset class="filter-item filter-item-2">
                      <legend class="filter-legend">Производители:</legend>
                      <ul>
                         <li class="filter-option">
@@ -120,7 +122,7 @@
                         </li>
                      </ul>
                   </fieldset>
-                  <fieldset class="filter-item">
+                  <fieldset class="filter-item filter-item-3">
                      <legend class="filter-legend">Питание:</legend>
                      <ul>
                         <li class="filter-option">
@@ -140,26 +142,20 @@
             </div>
             <div class="catalog-wrapper">
                <div class="sorting">
-                  <ul class="list-sorting">
-                     <li>Сортировка:</li>
-                     <li><a class="list-link price-sorting" href="#" aria-label="Сортировка по цене">по цене</a></li>
-                     <li><a class="list-link type-sorting" href="#" aria-label="Сортировка по типу">по типу</a></li>
-                     <li><a class="list-link functional-sorting" href="#" aria-label="Сортировка по функционалу">по функционалу</a></li>
-                     <li>
-                        <a class="functional-sorting active" href="#" aria-label="Сортировка по функционалу">
+                 <h3>Сортировка:</h3>
+                     <a class="link-sorting price-sorting" href="#">по цене</a>
+                     <a class="link-sorting type-sorting" href="#">по типу</a>
+                     <a class="link-sorting functional-sorting" href="#">по функционалу</a>
+                        <a href="#" class="active" aria-label="по возрастанию">
                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                               <path fill="#ee3643" d="M5.5 0L0 10h11z"/>
                            </svg>
                         </a>
-                     </li>
-                     <li>
-                        <a class="functional-sorting" href="#" aria-label="Сортировка по функционалу">
+                        <a href="#" aria-label="по убыванию">
                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                               <path fill="#231F20" opacity="0.2" d="M5.5 10L0 0h11"/>
                            </svg>
                         </a>
-                     </li>
-                  </ul>
                </div>
                <div class="catalog">
                   <article class="catalog-items">
@@ -291,19 +287,21 @@
                </ul>
             </div>
          </div>
+         <div class="description-wrapper">
          <section class="description">
             <h2>Пара слов о перфораторах</h2>
             <p>Перфоратор - универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
                Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток и ударная дрель.
             </p>
          </section>
+         </div>
       </main>
       <footer class="main-footer">
+        <div class="footer-menu-navigation-wrapper">
          <section class="footer-menu-navigation">
             <div class="footer-site-menu">
-               <h2 class="logo-bottom">
-                  <span class="visually-hidden">Логотип магазина Техномарт</span>
-               </h2>
+              <a class="logo-bottom" href="index.html">
+              <img src="svg/logo-technomart.svg" width="138" height="23" alt="Логотип магазина Техномарт"></a>
                <ul class="site-navigation-bottom">
                   <li><a href="company.html">Компания</a></li>
                   <li><a href="news.html">Новости</a></li>
@@ -324,6 +322,8 @@
                </ul>
             </div>
          </section>
+       </div>
+         <div class="footer-site-contacts-wrapper">
          <section class="footer-site-contacts">
             <p class="footer-company">
                &#169; 2010-2019 Компания &laquo;Техномарт&raquo;
@@ -337,13 +337,14 @@
                </ul>
             </div>
             <p class="footer-feedback">
-               Обратная связь: <span class="feedback-links">mail@htmlacademy.ru</span>
+               Обратная связь: <a href="#" class="feedback-links">mail@htmlacademy.ru</a>
             </p>
             <p class="footer-contacts">
                Разработано &mdash;
                <a class="feedback-links" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
             </p>
          </section>
+       </div>
       </footer>
       <!-- Модальное окно "Товар добавлен в корзину" -->
       <section class="modal add-item">
